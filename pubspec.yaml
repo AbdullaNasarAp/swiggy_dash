@@ -83,6 +83,11 @@ flutter:
     - family: Proxima Nova Font
       fonts:
         - asset: assets/fonts/Proxima Nova Font.otf
+
+    - family: Quattrocento Sans
+      fonts:
+        - asset: assets/fonts/QuattrocentoSans-Bold.ttf
+        - weight: 700
         
 
   #

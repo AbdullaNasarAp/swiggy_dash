@@ -12,6 +12,7 @@ class TextTitle extends StatelessWidget {
     this.textalign,
     this.color,
     this.decor,
+    this.fontfam,
   });
   final String title;
   final double ls;
@@ -22,6 +23,7 @@ class TextTitle extends StatelessWidget {
   final TextAlign? textalign;
   final Color? color;
   final TextDecoration? decor;
+  final String? fontfam;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,7 @@ class TextTitle extends StatelessWidget {
         decoration: decor,
         color: color,
         letterSpacing: ls,
+        fontFamily: fontfam,
         fontWeight: fontwght,
         fontSize: fontsz,
         overflow: overflow,

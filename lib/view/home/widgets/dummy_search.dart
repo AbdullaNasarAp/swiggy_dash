@@ -14,7 +14,7 @@ class DummySearch extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width * 1,
         height: 50,
         decoration: BoxDecoration(
             color: xGrey.withOpacity(0.3),

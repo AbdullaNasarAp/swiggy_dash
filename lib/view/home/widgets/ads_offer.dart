@@ -9,22 +9,23 @@ class AdsandOffer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: CarouselSlider.builder(
-        itemCount: 4,
-        itemBuilder: (context, index, realIndex) {
-          return ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(bannerList[index]));
-        },
-        options: CarouselOptions(
-          aspectRatio: 16 / 10,
-          height: 155,
-          viewportFraction: 0.7,
-          autoPlay: true,
-          autoPlayCurve: Curves.easeInQuint,
-          enlargeCenterPage: true,
-        ),
+    return CarouselSlider.builder(
+      itemCount: 4,
+      itemBuilder: (context, index, realIndex) {
+        return ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              bannerList[index],
+              fit: BoxFit.fitWidth,
+              width: MediaQuery.of(context).size.width,
+            ));
+      },
+      options: CarouselOptions(
+        height: MediaQuery.of(context).size.height / 4,
+        viewportFraction: 0.7,
+        autoPlay: true,
+        autoPlayCurve: Curves.easeInQuint,
+        enlargeCenterPage: true,
       ),
     );
   }

@@ -13,18 +13,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: const [
-              CostumAppBar(),
-              DummySearch(),
-              Categ(),
-              AdsandOffer(),
-              sizedBox,
-              DiscoverSwiggy()
-            ],
-          ),
+        body: ListView(
+          children: const [
+            CostumAppBar(),
+            DummySearch(),
+            Categ(),
+            AdsandOffer(),
+            sizedBox,
+            DiscoverSwiggy()
+          ],
         ),
       ),
     );

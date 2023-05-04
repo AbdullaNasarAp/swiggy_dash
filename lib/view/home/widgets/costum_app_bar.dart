@@ -10,46 +10,49 @@ class CostumAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        const FaIcon(
-          FontAwesomeIcons.solidPaperPlane,
-          color: xred,
-          size: 16,
-        ),
-        Column(
-          children: const [
-            TextTitle(
-                title: "Bangalore Railway Station Back..",
-                ls: 0,
-                fontwght: FontWeight.bold,
-                fontsz: 19),
-            TextTitle(
-                title: "Bangalore Railway Station Back Gate M.G Railway C...",
-                ls: 0,
-                fontwght: FontWeight.normal,
-                color: xGrey,
-                fontsz: 11.5),
-          ],
-        ),
-        const SizedBox(
-          width: 15,
-          height: 15,
-          child: ImageIcon(
-            AssetImage("assets/image/downarrow.png"),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          const FaIcon(
+            FontAwesomeIcons.solidPaperPlane,
+            color: xred,
+            size: 16,
           ),
-        ),
-        const CircleAvatar(
-          radius: 17,
-          backgroundColor: xBlack87,
-          child: Icon(
-            Icons.person_3,
-            color: xWhite,
-            size: 18,
+          Column(
+            children: const [
+              TextTitle(
+                  title: "Bangalore Railway Station Back..",
+                  ls: 0,
+                  fontwght: FontWeight.bold,
+                  fontsz: 17),
+              TextTitle(
+                  title: "Bangalore Railway Station Back Gate M.G Railway C...",
+                  ls: 0,
+                  fontwght: FontWeight.normal,
+                  color: xGrey,
+                  fontsz: 10),
+            ],
           ),
-        )
-      ],
+          const SizedBox(
+            width: 15,
+            height: 15,
+            child: ImageIcon(
+              AssetImage("assets/image/downarrow.png"),
+            ),
+          ),
+          const CircleAvatar(
+            radius: 17,
+            backgroundColor: xBlack87,
+            child: Icon(
+              Icons.person_3,
+              color: xWhite,
+              size: 18,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

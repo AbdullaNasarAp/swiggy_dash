@@ -13,10 +13,10 @@ class DiscoverSwiggy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 290,
       width: double.infinity,
-      decoration: BoxDecoration(color: xGrey.withOpacity(0.2)),
+      decoration: BoxDecoration(color: xGrey.withOpacity(0.3)),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -45,56 +45,77 @@ class DiscoverSwiggy extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 3,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Stack(
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        height: 230,
-                        decoration: BoxDecoration(
-                          color: xWhite,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.asset(
-                            dbannerList[index],
-                            fit: BoxFit.fitHeight,
+          ...List.generate(
+              3,
+              (index) => Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Stack(
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          height: 230,
+                          decoration: BoxDecoration(
+                            color: xWhite,
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        left: 15,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SizedBox(
-                            width: 300,
-                            child: RawMaterialButton(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              padding: const EdgeInsets.all(15),
-                              fillColor: colorList[index],
-                              onPressed: () {},
-                              child: TextTitle(
-                                  title: bottunTextList[index],
-                                  color: xWhite,
-                                  ls: 0,
-                                  fontwght: FontWeight.bold,
-                                  fontsz: 16),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              dbannerList[index],
+                              fit: BoxFit.cover,
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                );
-              },
+                        Positioned(
+                          bottom: 0,
+                          top: 150,
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.84,
+                                child: RawMaterialButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20)),
+                                  padding: const EdgeInsets.all(15),
+                                  fillColor: colorList[index],
+                                  onPressed: () {},
+                                  child: TextTitle(
+                                      title: bottunTextList[index],
+                                      color: xWhite,
+                                      ls: 0,
+                                      fontwght: FontWeight.bold,
+                                      fontsz: 16),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextTitle(
+                  title: "Live \nit up!",
+                  ls: 0,
+                  fontfam: "Quattrocento Sans",
+                  color: xBlack87.withOpacity(0.6),
+                  fontwght: FontWeight.bold,
+                  fontsz: 50,
+                ),
+                TextTitle(
+                  title: "Crafted with ❤️ in Bengaluru, India",
+                  ls: 0,
+                  fontfam: "Quattrocento Sans",
+                  color: xBlack87.withOpacity(0.6),
+                  fontwght: FontWeight.normal,
+                  fontsz: 16,
+                ),
+              ],
             ),
           )
         ],
