@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:swiggy_dash/controller/b_nav.dart';
-import 'package:swiggy_dash/view/bottom_nav.dart';
-import 'package:swiggy_dash/view/splash/spash.dart';
+import 'package:swiggy_dash/view/splash/splash.dart';
 import 'utils/colors.dart';
-import 'view/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

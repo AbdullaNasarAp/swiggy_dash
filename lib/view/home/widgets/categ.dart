@@ -19,7 +19,7 @@ class Categ extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width / 4.6,
+                        width: MediaQuery.of(context).size.width / 4.7,
                         height: 87,
                         decoration: BoxDecoration(
                             color: xGrey.withOpacity(0.4),
