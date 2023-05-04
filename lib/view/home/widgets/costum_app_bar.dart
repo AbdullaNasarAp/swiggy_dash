@@ -25,6 +25,7 @@ class CostumAppBar extends StatelessWidget {
               TextTitle(
                   title: "Bangalore Railway Station Back..",
                   ls: 0,
+                  color: xBlack87,
                   fontwght: FontWeight.bold,
                   fontsz: 17),
               TextTitle(
